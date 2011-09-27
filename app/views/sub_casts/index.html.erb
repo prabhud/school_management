@@ -1,0 +1,19 @@
+<% title "Sub Casts" %>
+
+<%= form_for @search, :html => { :id => "search-form" }   do |search| %>
+    <div id="div-search-form">
+        <table>
+            <tr><h3>Searching Criteria</h3></tr>
+            <tr>
+                <td><%= search.text_field :subcast_name_contains,:size => 15, :title => "Sub Cast" %></td>
+ 				<td><%= search.text_field :cast_cast_name_contains,:size => 15, :title => "Cast" %></td>
+                <td><%=search.submit "Search", :name => nil%></td>
+                <td><%= reset_form%></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id='sub_casts'>
+        <%= render 'sub_casts'%>
+    </div>
+<%end%>

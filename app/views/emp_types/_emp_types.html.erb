@@ -1,0 +1,35 @@
+<p>
+	<%= link_to_new "New Emp Type", new_emp_type_path %>
+</p>
+<%if @emp_types.length > 0%>
+	<table border=1>
+		<tr>
+			<th>S.No</th>
+			<th>Emptype Name</th>
+			<th>Emptype Des</th>
+			<th>Emptype Active</th>
+			<th colspan='3'>Action</th>
+		</tr>
+		<%  sno = paginate_sno
+		for emp_type in @emp_types %>
+		<tr>
+			<td align='right'><%= sno %></td>
+			<td><%= emp_type.emptype_name %></td>
+			<td><%= emp_type.emptype_des %></td>
+			<td><%= emp_type.emptype_active %></td>
+			<td><%= link_to_show "Show", emp_type %></td>
+			<td><%= link_to_edit "Edit", edit_emp_type_path(emp_type) %></td>
+			<td><%= link_to_destroy "Destroy", emp_type, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+		<% sno+=1
+		end %>
+	</table>
+	<br />
+	<p>
+		<%= will_paginate @emp_types %>
+	</p>
+<%else%>
+	<div class='flash_info'>
+		Record not found
+	</div>
+<%end%>

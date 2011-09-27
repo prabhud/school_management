@@ -1,0 +1,26 @@
+<%= form_for @sub_cast, :validate => true, :html => { :id => 'sub_cast_form'} do |f| %>
+<%= f.error_messages %>
+<div id="form-fields">
+	<table>
+		<tr>
+			<td> <%= f.label :subcast_name %></td>
+			<td> <%= f.text_field :subcast_name, :val => "allow_alpha_only" %></td>
+		</tr>
+		<tr>
+			<td> <%= f.label :subcast_des %></td>
+			<td> <%= f.text_area :subcast_des %></td>
+		</tr>
+		<tr>
+			<td> <%= f.label :subcast_active %></td>
+			<td> <%= f.check_box :subcast_active %></td>
+		</tr>
+		<tr>
+			<td> <%= f.label :cast %></td>
+			<td> <%= f.collection_select(:cast, Cast.order(:cast_name), :id, :cast_name,{:prompt => true})%></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><%= f.submit %></td>
+		</tr>
+	</table>
+</div>
+<% end %>

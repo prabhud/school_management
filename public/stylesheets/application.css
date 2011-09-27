@@ -1,0 +1,185 @@
+body {
+  background-color: #4B7399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.fieldWithErrors, .message {
+	font-size: 12px;
+	color: #d00;
+	padding-left: 5px;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
+
+
+.flash_info, .flash_success, .flash_warning, .flash_error, .validation {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.flash_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('/images/info_ico.png');
+}
+.flash_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('/images/success_ico.png');
+}
+.flash_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('/images/warning_ico.png');
+}
+.flash_error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('/images/error_ico.png');
+}
+
+.validation {
+color: #D63301;
+background-color: #FFCCBA;
+background-image: url('/images/error_ico.png');
+}
+
+select {
+ 	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	font-size: 12px;
+	 color: blue;		
+} 
+
+input {
+	 font-family: Verdana, Arial, Helvetica, sans-serif;
+	 font-size: 12px;
+ 	 color: #000000;
+ 	
+}
+
+form textarea {border: 1px solid #A5C2C8; padding: 5px 5px 5px 5px; margin: 0 0 5px 0; width: 210px;height: 60px; }
+
+.changed_form_field {
+  background-color: #F0F0F0;
+  color: #000000;
+}
+
+#ajaxSpinnerContainer {
+	display: none;
+ 	position: absolute;
+	width: 105px;
+  	height: 84px;
+    left: 50%;
+	top: 30%;
+	text-align:center;
+	vertical-align: middle;
+	background: transparent url(/images/loading_bg.png) no-repeat top left;
+    z-index: 1000;
+}
+
+.fade { opacity:0.2 !important;}
+
+#searching-fields {
+    margin:0 auto;
+    text-align:left;
+    border:1px solid #ccc;
+    padding:15px;
+    background:#fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0 0 4px #ccc;
+    -webkit-box-shadow: 0 0 4px #ccc;
+    -moz-box-shadow: 0 0 4px #ccc;
+}
+         
+#search_submit {
+	 border:1px solid #ccc;
+	 padding:4px;
+	 text-align:center;
+	 font-weight: bold;
+	 vertical-align: middle;
+	 border-radius: 10px;
+	 color: #FFFFFF;
+	 -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     text-indent: 12px;
+     background: left #1589FF url('/images/view.png') no-repeat;
+}
+
+.title-blur {
+    color: #AAAAAA;
+    text-align: left;
+}

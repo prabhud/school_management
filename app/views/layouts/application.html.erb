@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <%= stylesheet_link_tag "application", "menu", "jquery-ui/jquery-ui-custom", 'pagination' %>
+    <%= javascript_include_tag :defaults,"menu", 'jquery-ui/jquery-ui-custom.min', "validations/rails.validations",  "effects/jquery.alphanumeric.pack", 'effects/jquery.hint', 'effects/jquery.elastic'%>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+		<div id="ajaxSpinnerContainer">
+			<p><%= image_tag("pls_wait_spinner.gif", :alt => "Loading..") %></p>
+			<p> Please Wait....</p>
+		</div>
+		<table>
+			<tr><td>
+				<ul id="sddm">
+					<li><%= link_to "Transfer Certificate", stud_std_details_url %>	</li>
+					
+					<li><a href="#" onmouseover="mopen('management')" onmouseout="mclosetime()">Management</a>
+						<div id="management" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+							<%= link_to "Students", students_url%>
+							<%#= link_to "Previous school details", stud_pre_sc_details_url%>
+							<%= link_to "Student classes", stud_std_details_url%>
+							<%= link_to "Casts", casts_url%>
+							<%= link_to "Sub Casts", sub_casts_url%>
+							<%#= link_to "Standards", standards_url%>
+							<%#= link_to "Sections", sections_url%>
+							<%#= link_to "Employee Type", emp_types_url%>
+							<%#= link_to "employees", employees_url%>
+						</div>
+					</li>
+					<li><a href="#" onmouseover="mopen('superadmin')" onmouseout="mclosetime()">SuperAdmin</a>
+						<div id="superadmin" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+							<%= link_to "School", schools_url%>
+						</div>
+					</li>
+				</ul>
+			</td></tr>
+		</table>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :class => "flash_#{name}" %>
+      <% end %>
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+module StudStdDetailsHelper
+end

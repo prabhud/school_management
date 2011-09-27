@@ -1,0 +1,22 @@
+<%= form_for @section do |f| %>
+	<%= f.error_messages %>
+	<div id="form-fields">
+		<table>
+			<tr>
+				<td> <%= f.label :sec_name, "Section Name" %></td>
+				<td> <%= f.text_field :sec_name %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sec_des, "Description" %></td>
+				<td> <%= f.text_area :sec_des %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sec_active %></td>
+				<td> <%= f.check_box :sec_active %></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><%= f.submit %></td>
+			</tr>
+		</table>
+	</div>
+<% end %>

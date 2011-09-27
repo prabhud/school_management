@@ -1,0 +1,60 @@
+<%= form.fields_for :stud_pre_sc_detail do |stud_pre_sc_detail_form| %>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_name, 'School Name' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_name, :val => "allow_alpha_only" %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_principal_name, 'Principal Name' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_principal_name, :val => "allow_alpha_only" %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_address1, 'Address1' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_address1, :val => "address"  %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_address2, 'Address2' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_address2, :val => "allow_alpha_only"  %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_city, 'City' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_city, :val => "allow_alpha_only" %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_state, 'State' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_state, :val => "allow_alpha_only" %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_pin, 'PIN Code' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_pin, :size => 8 %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_country, 'Country' %></td> 
+		<td> <%= stud_pre_sc_detail_form.collection_select(:pre_sc_country, Country.order(:name), :name, :name,{:prompt => true})%> </td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_tel_no, 'Phone' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_tel_no, :val => "phone_number", :size => 10 %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_fax_no, 'Fax No.' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_fax_no %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_last_studied, 'Last Studied' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_last_studied %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_leaving_date, 'Date of Leaving' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_leaving_date, :size => 8 %></td>
+	</tr>
+	<tr>
+		<td><%= stud_pre_sc_detail_form.label :pre_sc_rea_of_leaving, 'Reason for Leaving' %></td>
+		<td> <%= stud_pre_sc_detail_form.text_field :pre_sc_rea_of_leaving, :val => "name" %></td>
+	</tr>
+	<% unless stud_pre_sc_detail_form.object.nil? || stud_pre_sc_detail_form.object.new_record? %>
+	<tr>
+		<td> <b><%= stud_pre_sc_detail_form.label :_destroy, 'Remove This Entry' %></b></td>
+		<td><%= stud_pre_sc_detail_form.check_box :_destroy %></td>
+	</tr>
+	<% end %>
+<% end %>

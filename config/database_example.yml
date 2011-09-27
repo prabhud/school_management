@@ -1,0 +1,28 @@
+# SQLite version 3.x
+#   gem install sqlite3
+development:
+  adapter: postgresql
+  database: sch_mgt_dev
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: postgresql
+  database: sch_mgt_test
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  database: sch_mgt_prd
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432

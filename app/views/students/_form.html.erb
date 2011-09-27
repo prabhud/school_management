@@ -1,0 +1,158 @@
+<script type="text/javascript" charset="utf-8">
+
+		$(function() {
+			$("#student_stud_dob").datepicker({
+				dateFormat : 'dd-mm-yy',
+				changeMonth : true,
+				changeYear : true,
+				yearRange : '-100y:+100y'
+			});
+			$("#student_stud_date_of_joining").datepicker({
+				dateFormat : 'dd-mm-yy',
+				changeMonth : true,
+				changeYear : true,
+				yearRange : '-100y:+100y'
+			});
+			$("#student_stud_pre_sc_detail_attributes_pre_sc_leaving_date").datepicker({
+				dateFormat : 'dd-mm-yy',
+				changeMonth : true,
+				changeYear : true,
+				yearRange : '-100y:+100y'
+			});
+
+		});
+
+</script>
+<%= form_for @student, :validate => true, :html => { :id => 'student_form'} do |f| %>
+<%= f.error_messages %>
+<%= f.hidden_field :school_id, :value => 1 %>
+<div id="form-fields">
+	<table>
+		<tr>
+			<td colspan="2" align="center"><%= f.submit :Register %></td>
+		</tr>
+		<tr>
+			<td align="left">
+			<table>
+				<tr>
+					<td colspan="2"><h4>Student Details</h4></td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_firstname, "First Name" %></td><td> <%= f.text_field :stud_firstname, :val => "name" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_lastname, "Last Name" %></td><td> <%= f.text_field :stud_lastname, :val => "name"  %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_sex, "Sex" %></td><td> <%= f.radio_button( :stud_sex, "Male", :checked => true)%><%= image_tag("/images/male.gif",:title=>"Male")%>&nbsp;&nbsp;&nbsp;
+					<%= f.radio_button(:stud_sex, "Female")%><%= image_tag("/images/fem.gif",:title=>"Female")%> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_dob, "DOB" %></td><td> <%= f.text_field :stud_dob, :size => 12 %> </td>
+				</tr>
+			</table></td>
+			<td align="left">
+			<table>
+				<tr>
+					<td colspan="2"><h4>Personal Information</h4></td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_father_name, "Father Name" %></td><td> <%= f.text_field :stud_father_name, :val => "name"  %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_mother_name, "Mother Name" %></td><td> <%= f.text_field :stud_mother_name, :val => "name"  %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_guardian_name, "Guardien Name" %></td><td> <%= f.text_field :stud_guardian_name, :val => "name"  %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_blood_group, "Blood Group" %></td><td> <%= f.text_field :stud_blood_group, :val => "bg", :size => 10 %> </td>
+				</tr>
+			</table></td>
+		</tr>
+		<tr>
+			<td align="left">
+			<table>
+				<tr>
+					<td colspan="2"><h4>Communication Details</h4></td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_address1, "Address1" %></td><td> <%= f.text_field :stud_address1, :val => "address" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_address2, "Address2" %></td><td> <%= f.text_field :stud_address2, :val => "allow_alpha_only" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_city, "City" %></td><td> <%= f.text_field :stud_city, :val => "allow_alpha_only" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_state, "State" %></td><td> <%= f.text_field :stud_state, :val => "allow_alpha_only" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_pin, "Pin Code" %></td><td> <%= f.text_field :stud_pin, :size => 8 %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_country, "Country" %></td><td>  <%= f.collection_select(:stud_country, Country.order(:name), :name, :name,{:prompt => true})%></td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_contact_number, "Contact Number" %></td><td> <%= f.text_field :stud_contact_number, :val => "phone_number", :size => 18 %> </td>
+				</tr>
+			</table></td>
+			<td valign='top'>
+			<table>
+				<tr>
+					<td colspan="2"><h4>Social Information</h4></td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_religion, "Religion" %></td><td> <%= f.text_field :stud_religion, :val => "allow_alpha_only" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_nationality, "Nationality" %></td><td> <%= f.collection_select(:stud_nationality, Country.order(:name), :name, :name,{:prompt => true})%> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_mother_tounge, "Monther Tounge" %></td><td> <%= f.text_field :stud_mother_tounge, :val => "allow_alpha_only" %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :sub_cast_id, "Cast" %></td>
+					<td> <%= f.collection_select(:sub_cast_id, SubCast.order(:subcast_name), :id, :cast_with_subcast_name,{:prompt => true})%> </td>
+				</tr>
+			</table></td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<table>
+				<tr>
+					<td colspan="2"><h4><%= f.label :stud_identification, "Identification" %></h4></td>
+				</tr>
+				<tr>
+					<td colspan="2"> <%= f.text_area :stud_identification %> </td>
+				</tr>
+				<tr>
+					<td colspan="2"><h4>Office Use</h4></td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_admission_no, "Admission Number" %></td><td> <%= f.text_field :stud_admission_no, :size => 18 %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_date_of_joining, "Date of Join" %></td><td> <%= f.text_field :stud_date_of_joining, :size => 12 %> </td>
+				</tr>
+				<tr>
+					<td> <%= f.label :stud_std_admitted, "Standard Admintted" %></td><td> <%= f.text_field :stud_std_admitted, :size => 12 %> </td>
+				</tr>
+
+
+			</table></td>
+			<td>
+			<table>
+				<tr>
+					<td colspan="2"><h4>Previous School Details</h4></td>
+				</tr>
+				<%= render :partial => 'pre_sc_detail',:locals => {:form => f} %>
+			</table></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><%= f.submit :Register %></td>
+		</tr>
+	<table>
+</div>
+<% end %> 

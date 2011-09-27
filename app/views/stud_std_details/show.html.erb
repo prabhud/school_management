@@ -1,0 +1,32 @@
+<% title "Stud Std Detail" %>
+
+<p>
+  <strong>Rollno:</strong>
+  <%= @stud_std_detail.rollno %>
+</p>
+<p>
+  <strong>Year Of Joining:</strong>
+  <%= @stud_std_detail.year_of_joining %>
+</p>
+<p>
+  <strong>Year Of Passing:</strong>
+  <%= @stud_std_detail.year_of_passing %>
+</p>
+<p>
+  <strong>Result:</strong>
+  <%= @stud_std_detail.result %>
+</p>
+<p>
+  <strong>Section:</strong>
+  <%= @stud_std_detail.section %>
+</p>
+<p>
+  <strong>Standard:</strong>
+  <%= @stud_std_detail.standard %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_stud_std_detail_path(@stud_std_detail) %> |
+  <%= link_to_destroy "Destroy", @stud_std_detail, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", stud_std_details_path %>
+</p>

@@ -1,0 +1,9 @@
+one:
+  emptype_name: MyString
+  emptype_des: MyText
+  emptype_active: false
+
+two:
+  emptype_name: MyString
+  emptype_des: MyText
+  emptype_active: false

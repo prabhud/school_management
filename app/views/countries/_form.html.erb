@@ -1,0 +1,40 @@
+<%= form_for @country do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :iso %><br />
+    <%= f.text_field :iso %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :printable_name %><br />
+    <%= f.text_field :printable_name %>
+  </p>
+  <p>
+    <%= f.label :iso2 %><br />
+    <%= f.text_field :iso2 %>
+  </p>
+  <p>
+    <%= f.label :iso3 %><br />
+    <%= f.text_field :iso3 %>
+  </p>
+  <p>
+    <%= f.label :numcode %><br />
+    <%= f.text_field :numcode %>
+  </p>
+  <p>
+    <%= f.label :textcode %><br />
+    <%= f.text_field :textcode %>
+  </p>
+  <p>
+    <%= f.label :capital %><br />
+    <%= f.text_field :capital %>
+  </p>
+  <p>
+    <%= f.label :population %><br />
+    <%= f.text_field :population %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

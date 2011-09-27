@@ -1,0 +1,33 @@
+one:
+  pre_sc_name: MyString
+  pre_sc_principal_name: MyString
+  pre_sc_address1: MyString
+  pre_sc_address2: MyString
+  pre_sc_state: MyString
+  pre_sc_country: MyString
+  pre_sc_pin: MyString
+  pre_sc_tel_no: MyString
+  pre_sc_web_addr: MyString
+  pre_sc_email_addr: MyString
+  pre_sc_fax_no: MyString
+  pre_sc_last_studied: MyString
+  pre_sc_leaving_date: 2011-09-17
+  pre_sc_rea_of_leaving: MyText
+  student: 
+
+two:
+  pre_sc_name: MyString
+  pre_sc_principal_name: MyString
+  pre_sc_address1: MyString
+  pre_sc_address2: MyString
+  pre_sc_state: MyString
+  pre_sc_country: MyString
+  pre_sc_pin: MyString
+  pre_sc_tel_no: MyString
+  pre_sc_web_addr: MyString
+  pre_sc_email_addr: MyString
+  pre_sc_fax_no: MyString
+  pre_sc_last_studied: MyString
+  pre_sc_leaving_date: 2011-09-17
+  pre_sc_rea_of_leaving: MyText
+  student: 

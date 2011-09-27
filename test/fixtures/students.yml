@@ -1,0 +1,45 @@
+one:
+  stud_firstname: MyString
+  stud_lastname: MyString
+  stud_sex: false
+  stud_dob: 2011-09-17
+  stud_father_name: MyString
+  stud_guardian_name: MyString
+  stud_address1: MyString
+  stud_address2: MyString
+  stud_state: MyString
+  stud_pin: MyString
+  country: MyString
+  stud_identification: MyText
+  stud_contact_number: MyString
+  stud_blood_group: MyString
+  stud_religion: MyString
+  stud_nationality: MyString
+  stud_mother_tounge: MyString
+  stud_date_of_joining: 2011-09-17
+  stud_active: false
+  school: 
+  sub_cast: 
+
+two:
+  stud_firstname: MyString
+  stud_lastname: MyString
+  stud_sex: false
+  stud_dob: 2011-09-17
+  stud_father_name: MyString
+  stud_guardian_name: MyString
+  stud_address1: MyString
+  stud_address2: MyString
+  stud_state: MyString
+  stud_pin: MyString
+  country: MyString
+  stud_identification: MyText
+  stud_contact_number: MyString
+  stud_blood_group: MyString
+  stud_religion: MyString
+  stud_nationality: MyString
+  stud_mother_tounge: MyString
+  stud_date_of_joining: 2011-09-17
+  stud_active: false
+  school: 
+  sub_cast: 

@@ -1,0 +1,20 @@
+<% title "Emp Type" %>
+
+<p>
+  <strong>Emptype Name:</strong>
+  <%= @emp_type.emptype_name %>
+</p>
+<p>
+  <strong>Emptype Des:</strong>
+  <%= @emp_type.emptype_des %>
+</p>
+<p>
+  <strong>Emptype Active:</strong>
+  <%= @emp_type.emptype_active %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_emp_type_path(@emp_type) %> |
+  <%= link_to_destroy "Destroy", @emp_type, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", emp_types_path %>
+</p>

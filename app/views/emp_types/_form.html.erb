@@ -1,0 +1,23 @@
+<%= form_for @emp_type do |f| %>
+	<%= f.error_messages %>
+	<div id="form-fields">
+		<table>
+			<tr>
+				<td> <%= f.label :emptype_name, "Name" %></td>
+				<td> <%= f.text_field :emptype_name %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :emptype_des, "Description" %></td>
+				<td> <%= f.text_area :emptype_des %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :emptype_active %></td>
+				<td> <%= f.check_box :emptype_active %></td>
+			</tr>
+			</td></tr>
+			<tr>
+				<td colspan="2" align="center"><%= f.submit %></td>
+			</tr>
+		</table>
+	</div>
+<% end %>

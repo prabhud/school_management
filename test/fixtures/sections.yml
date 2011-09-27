@@ -1,0 +1,9 @@
+one:
+  sec_name: MyString
+  sec_des: MyText
+  sec_active: false
+
+two:
+  sec_name: MyString
+  sec_des: MyText
+  sec_active: false

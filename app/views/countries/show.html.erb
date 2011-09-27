@@ -1,0 +1,44 @@
+<% title "Country" %>
+
+<p>
+  <strong>Iso:</strong>
+  <%= @country.iso %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+<p>
+  <strong>Printable Name:</strong>
+  <%= @country.printable_name %>
+</p>
+<p>
+  <strong>Iso2:</strong>
+  <%= @country.iso2 %>
+</p>
+<p>
+  <strong>Iso3:</strong>
+  <%= @country.iso3 %>
+</p>
+<p>
+  <strong>Numcode:</strong>
+  <%= @country.numcode %>
+</p>
+<p>
+  <strong>Textcode:</strong>
+  <%= @country.textcode %>
+</p>
+<p>
+  <strong>Capital:</strong>
+  <%= @country.capital %>
+</p>
+<p>
+  <strong>Population:</strong>
+  <%= @country.population %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_country_path(@country) %> |
+  <%= link_to_destroy "Destroy", @country, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", countries_path %>
+</p>

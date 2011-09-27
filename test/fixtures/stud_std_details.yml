@@ -1,0 +1,15 @@
+one:
+  rollno: MyString
+  year_of_joining: MyString
+  year_of_passing: MyString
+  result: MyString
+  section: 
+  standard: 
+
+two:
+  rollno: MyString
+  year_of_joining: MyString
+  year_of_passing: MyString
+  result: MyString
+  section: 
+  standard: 

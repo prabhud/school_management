@@ -1,0 +1,28 @@
+<%= form_for @stud_std_detail do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :rollno %><br />
+    <%= f.text_field :rollno %>
+  </p>
+  <p>
+    <%= f.label :year_of_joining %><br />
+    <%= f.text_field :year_of_joining %>
+  </p>
+  <p>
+    <%= f.label :year_of_passing %><br />
+    <%= f.text_field :year_of_passing %>
+  </p>
+  <p>
+    <%= f.label :result %><br />
+    <%= f.text_field :result %>
+  </p>
+  <p>
+    <%= f.label :section %><br />
+    <%= f.text_field :section %>
+  </p>
+  <p>
+    <%= f.label :standard %><br />
+    <%= f.text_field :standard %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

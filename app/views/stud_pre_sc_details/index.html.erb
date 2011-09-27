@@ -1,0 +1,45 @@
+<% title "Stud Pre Sc Details" %>
+
+<table>
+  <tr>
+    <th>Pre Sc Name</th>
+    <th>Pre Sc Principal Name</th>
+    <th>Pre Sc Address1</th>
+    <th>Pre Sc Address2</th>
+    <th>Pre Sc State</th>
+    <th>Pre Sc Country</th>
+    <th>Pre Sc Pin</th>
+    <th>Pre Sc Tel No</th>
+    <th>Pre Sc Web Addr</th>
+    <th>Pre Sc Email Addr</th>
+    <th>Pre Sc Fax No</th>
+    <th>Pre Sc Last Studied</th>
+    <th>Pre Sc Leaving Date</th>
+    <th>Pre Sc Rea Of Leaving</th>
+    <th>Student</th>
+  </tr>
+  <% for stud_pre_sc_detail in @stud_pre_sc_details %>
+    <tr>
+      <td><%= stud_pre_sc_detail.pre_sc_name %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_principal_name %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_address1 %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_address2 %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_state %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_country %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_pin %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_tel_no %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_web_addr %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_email_addr %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_fax_no %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_last_studied %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_leaving_date %></td>
+      <td><%= stud_pre_sc_detail.pre_sc_rea_of_leaving %></td>
+      <td><%= stud_pre_sc_detail.student %></td>
+      <td><%= link_to_show "Show", stud_pre_sc_detail %></td>
+      <td><%= link_to_edit "Edit", edit_stud_pre_sc_detail_path(stud_pre_sc_detail) %></td>
+      <td><%= link_to_destroy "Destroy", stud_pre_sc_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to_new "New Stud Pre Sc Detail", new_stud_pre_sc_detail_path %></p>

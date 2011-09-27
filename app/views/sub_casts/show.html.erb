@@ -1,0 +1,20 @@
+<% title "Sub Cast" %>
+
+<p>
+  <strong>Subcast</strong>
+  <%= @sub_cast.subcast_name %>
+</p>
+<p>
+  <strong>Description</strong>
+  <%= @sub_cast.subcast_des %>
+</p>
+<p>
+  <strong>Cast</strong>
+  <%= @sub_cast.cast.cast_name %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_sub_cast_path(@sub_cast) %> |
+  <%= link_to_destroy "Destroy", @sub_cast, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sub_casts_path %>
+</p>

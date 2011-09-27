@@ -1,0 +1,63 @@
+
+
+<p>
+	<%= link_to_new "New Student", new_student_path %>
+</p>
+<%if @students.length > 0%>
+	<table border=1>
+		<tr>
+			<th>S.No</th>
+			<th>Serial No</th>
+			<th>Name</th>
+			<th>Sex</th>
+			<th>Dob</th>
+			<th>Father Name</th>
+			<th>Mother Name</th>
+			<th>Guardian Name</th>
+			<th>Phone</th>
+			<th>Address</th>
+			<th>Cast</th>
+			<th colspan='3'>Action</th>
+		</tr>
+		<%  sno = paginate_sno
+		for student in @students %>
+		<tr>
+			<td align='right'><%= sno %></td>
+			<td align="right"><%= student.id %></td>
+			<td><%= student.student_name %></td>
+			<td><%= student.stud_sex %></td>
+			<td><%= student.stud_dob %></td>
+			<td><%= student.stud_father_name %></td>
+			<td><%= student.stud_mother_name %></td>
+			<td><%= student.stud_guardian_name %></td>
+			<td><%= student.stud_contact_number %></td>
+			<td><%= student.student_address %></td>
+			<td><%= student.sub_cast.cast_with_subcast_name %></td>
+			<td><a href="#" id="show_<%=student.id%>"><%=(image_tag "/images/view_ico.png", :border => 0, :title => "Show", :alt => "Show")%></a></td>
+			<td><%= link_to_edit "Edit", edit_student_path(student) %></td>
+			<td><%= link_to_destroy "Destroy", student, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+		<tr><td id="student_<%=student.id%>" style="display: none" title="<%=student.student_name%> - Details" ><%=render :partial => "show", :object => student%></td></tr>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$( "#student_<%=student.id%>" ).dialog({ autoOpen: false,minWidth: 700,
+					buttons: { "Ok": function() {
+	        		$(this).dialog("close");
+	      			}},resizable: true
+	 		 	});
+			});
+			$("#show_<%=student.id%>").click(function(){ $("#student_<%=student.id%>").dialog('open'); });
+		</script>
+		<% sno+=1
+		end %>
+	</table>
+	<br />
+	<p>
+		<%= will_paginate @students %>
+	</p>
+<%else%>
+	<div class='flash_info'>
+		Record not found
+	</div>
+<%end%> 

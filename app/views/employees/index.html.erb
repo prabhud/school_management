@@ -1,0 +1,37 @@
+<% title "Employees" %>
+
+<table>
+  <tr>
+    <th>Emp Name</th>
+    <th>Emp Address1</th>
+    <th>Emp Address2</th>
+    <th>Emp State</th>
+    <th>Emp Pin</th>
+    <th>Emp Country</th>
+    <th>Emp Mobile</th>
+    <th>Emp Email</th>
+    <th>Emp Active</th>
+    <th>Emp Type</th>
+    <th>School</th>
+  </tr>
+  <% for employee in @employees %>
+    <tr>
+      <td><%= employee.emp_name %></td>
+      <td><%= employee.emp_address1 %></td>
+      <td><%= employee.emp_address2 %></td>
+      <td><%= employee.emp_state %></td>
+      <td><%= employee.emp_pin %></td>
+      <td><%= employee.emp_country %></td>
+      <td><%= employee.emp_mobile %></td>
+      <td><%= employee.emp_email %></td>
+      <td><%= employee.emp_active %></td>
+      <td><%= employee.emp_type %></td>
+      <td><%= employee.school %></td>
+      <td><%= link_to_show "Show", employee %></td>
+      <td><%= link_to_edit "Edit", edit_employee_path(employee) %></td>
+      <td><%= link_to_destroy "Destroy", employee, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to_new "New Employee", new_employee_path %></p>

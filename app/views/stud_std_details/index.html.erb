@@ -1,0 +1,27 @@
+<% title "Stud Std Details" %>
+
+<table>
+  <tr>
+    <th>Rollno</th>
+    <th>Year Of Joining</th>
+    <th>Year Of Passing</th>
+    <th>Result</th>
+    <th>Section</th>
+    <th>Standard</th>
+  </tr>
+  <% for stud_std_detail in @stud_std_details %>
+    <tr>
+      <td><%= stud_std_detail.rollno %></td>
+      <td><%= stud_std_detail.year_of_joining %></td>
+      <td><%= stud_std_detail.year_of_passing %></td>
+      <td><%= stud_std_detail.result %></td>
+      <td><%= stud_std_detail.section %></td>
+      <td><%= stud_std_detail.standard %></td>
+      <td><%= link_to_show "Show", stud_std_detail %></td>
+      <td><%= link_to_edit "Edit", edit_stud_std_detail_path(stud_std_detail) %></td>
+      <td><%= link_to_destroy "Destroy", stud_std_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to_new "New Stud Std Detail", new_stud_std_detail_path %></p>

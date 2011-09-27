@@ -1,0 +1,54 @@
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.pagination{
+padding: 2px;
+font-size: 12px;
+}
+
+.pagination span{
+margin: 0;
+text-align: left; /*Set to "right" to right align pagination interface*/
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+.pagination span.current{
+padding: 0 5px;
+background-color: #1061de;
+color: #FFF !important;
+border-color: #2b66a5;
+font-weight: bold;
+cursor: default;
+}
+
+.pagination span.disabled, .pagination span.disabled:hover{
+background-color: white;
+cursor: default;
+color: #929292;
+border-color: #929292;
+font-weight: normal !important;
+}
+
+.pagination span.next_page, .pagination span.prev_page{
+padding: 0 5px;
+}
+
+.pagination a, .pagination a:visited{
+padding: 0 5px;
+border: 1px solid #9aafe5;
+text-decoration: none; 
+color: #2e6ab1;
+}
+
+.pagination a:hover{
+border: 1px solid #2b66a5;
+color: #000;
+background-color: #FFFF80;
+}
+
+
+.pagination a.next_page, .pagination a.prev_page{
+font-weight: normal;
+}

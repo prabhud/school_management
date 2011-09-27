@@ -1,0 +1,58 @@
+<%= form_for @school, :validate => true, :html => { :id => 'school_form'} do |f| %>
+	<%= f.error_messages %>
+	<div id="form-fields">
+		<table>
+			<tr>
+				<td> <%= f.label :sc_name, "Name" %></td>
+				<td> <%= f.text_field :sc_name %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_address1, "Address1" %></td>
+				<td> <%= f.text_field :sc_address1 %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_address2, "Address2" %></td>
+				<td> <%= f.text_field :sc_address2 %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_city, "City" %></td>
+				<td> <%= f.text_field :sc_city %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_state, "State" %></td>
+				<td> <%= f.text_field :sc_state %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_pin, "Pin" %></td>
+				<td> <%= f.text_field :sc_pin %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_country, "Country" %></td>
+				<td> <%= f.text_field :sc_country %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_tel_no, "Tel.No" %></td>
+				<td> <%= f.text_field :sc_tel_no %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_web_addr, "Web Site" %></td>
+				<td> <%= f.text_field :sc_web_addr %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_email_addr, "Email ID" %></td>
+				<td> <%= f.text_field :sc_email_addr %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_fax_no, "Fax.No" %></td>
+				<td> <%= f.text_field :sc_fax_no %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :sc_active %></td>
+				<td> <%= f.check_box :sc_active %></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><%= f.submit %></td>
+			</tr>
+		</table>
+	</div>
+<% end %>

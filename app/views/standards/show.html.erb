@@ -1,0 +1,20 @@
+<% title "Standard" %>
+
+<p>
+  <strong>Std Name:</strong>
+  <%= @standard.std_name %>
+</p>
+<p>
+  <strong>Std Des:</strong>
+  <%= @standard.std_des %>
+</p>
+<p>
+  <strong>Std Active:</strong>
+  <%= @standard.std_active %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_standard_path(@standard) %> |
+  <%= link_to_destroy "Destroy", @standard, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", standards_path %>
+</p>

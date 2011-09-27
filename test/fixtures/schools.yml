@@ -1,0 +1,25 @@
+one:
+  sc_name: MyString
+  sc_address1: MyString
+  sc_address2: MyString
+  sc_state: MyString
+  sc_pin: MyString
+  sc_country: MyString
+  sc_tel_no: MyString
+  sc_web_addr: MyString
+  sc_email_addr: MyString
+  sc_fax_no: MyString
+  sc_active: false
+
+two:
+  sc_name: MyString
+  sc_address1: MyString
+  sc_address2: MyString
+  sc_state: MyString
+  sc_pin: MyString
+  sc_country: MyString
+  sc_tel_no: MyString
+  sc_web_addr: MyString
+  sc_email_addr: MyString
+  sc_fax_no: MyString
+  sc_active: false

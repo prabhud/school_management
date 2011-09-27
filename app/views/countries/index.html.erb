@@ -1,0 +1,33 @@
+<% title "Countries" %>
+
+<table>
+  <tr>
+    <th>Iso</th>
+    <th>Name</th>
+    <th>Printable Name</th>
+    <th>Iso2</th>
+    <th>Iso3</th>
+    <th>Numcode</th>
+    <th>Textcode</th>
+    <th>Capital</th>
+    <th>Population</th>
+  </tr>
+  <% for country in @countries %>
+    <tr>
+      <td><%= country.iso %></td>
+      <td><%= country.name %></td>
+      <td><%= country.printable_name %></td>
+      <td><%= country.iso2 %></td>
+      <td><%= country.iso3 %></td>
+      <td><%= country.numcode %></td>
+      <td><%= country.textcode %></td>
+      <td><%= country.capital %></td>
+      <td><%= country.population %></td>
+      <td><%= link_to_show "Show", country %></td>
+      <td><%= link_to_edit "Edit", edit_country_path(country) %></td>
+      <td><%= link_to_destroy "Destroy", country, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to_new "New Country", new_country_path %></p>

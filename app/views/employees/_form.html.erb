@@ -1,0 +1,48 @@
+<%= form_for @employee do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :emp_name %><br />
+    <%= f.text_field :emp_name %>
+  </p>
+  <p>
+    <%= f.label :emp_address1 %><br />
+    <%= f.text_field :emp_address1 %>
+  </p>
+  <p>
+    <%= f.label :emp_address2 %><br />
+    <%= f.text_field :emp_address2 %>
+  </p>
+  <p>
+    <%= f.label :emp_state %><br />
+    <%= f.text_field :emp_state %>
+  </p>
+  <p>
+    <%= f.label :emp_pin %><br />
+    <%= f.text_field :emp_pin %>
+  </p>
+  <p>
+    <%= f.label :emp_country %><br />
+    <%= f.text_field :emp_country %>
+  </p>
+  <p>
+    <%= f.label :emp_mobile %><br />
+    <%= f.text_field :emp_mobile %>
+  </p>
+  <p>
+    <%= f.label :emp_email %><br />
+    <%= f.text_field :emp_email %>
+  </p>
+  <p>
+    <%= f.label :emp_active %><br />
+    <%= f.check_box :emp_active %>
+  </p>
+  <p>
+    <%= f.label :emp_type %><br />
+    <%= f.text_field :emp_type %>
+  </p>
+  <p>
+    <%= f.label :school %><br />
+    <%= f.text_field :school %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

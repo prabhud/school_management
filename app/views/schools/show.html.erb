@@ -1,0 +1,52 @@
+<% title "School" %>
+
+<p>
+  <strong>Sc Name:</strong>
+  <%= @school.sc_name %>
+</p>
+<p>
+  <strong>Sc Address1:</strong>
+  <%= @school.sc_address1 %>
+</p>
+<p>
+  <strong>Sc Address2:</strong>
+  <%= @school.sc_address2 %>
+</p>
+<p>
+  <strong>Sc State:</strong>
+  <%= @school.sc_state %>
+</p>
+<p>
+  <strong>Sc Pin:</strong>
+  <%= @school.sc_pin %>
+</p>
+<p>
+  <strong>Sc Country:</strong>
+  <%= @school.sc_country %>
+</p>
+<p>
+  <strong>Sc Tel No:</strong>
+  <%= @school.sc_tel_no %>
+</p>
+<p>
+  <strong>Sc Web Addr:</strong>
+  <%= @school.sc_web_addr %>
+</p>
+<p>
+  <strong>Sc Email Addr:</strong>
+  <%= @school.sc_email_addr %>
+</p>
+<p>
+  <strong>Sc Fax No:</strong>
+  <%= @school.sc_fax_no %>
+</p>
+<p>
+  <strong>Sc Active:</strong>
+  <%= @school.sc_active %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_school_path(@school) %> |
+  <%= link_to_destroy "Destroy", @school, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", schools_path %>
+</p>

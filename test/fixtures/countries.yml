@@ -1,0 +1,21 @@
+one:
+  iso: MyString
+  name: MyString
+  printable_name: MyString
+  iso2: MyString
+  iso3: MyString
+  numcode: 1
+  textcode: MyString
+  capital: MyString
+  population: 1
+
+two:
+  iso: MyString
+  name: MyString
+  printable_name: MyString
+  iso2: MyString
+  iso3: MyString
+  numcode: 1
+  textcode: MyString
+  capital: MyString
+  population: 1

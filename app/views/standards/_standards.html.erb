@@ -1,0 +1,36 @@
+<p>
+	<%= link_to_new "New Standard", new_standard_path %>
+</p>
+<%if @standards.length > 0%>
+	<table border=1>
+		<tr>
+			<th>S.No</th>
+			<th>Std Name</th>
+			<th>Std Des</th>
+			<th>Std Active</th>
+			<th colspan='3'>Action</th>
+		</tr>
+		<% sno = paginate_sno
+		for standard in @standards %>
+		<tr>
+			<td align='right'><%= sno %></td>
+			<td><%= standard.std_name_str %></td>
+			<td><%= standard.std_name_int %></td>
+			<td><%= standard.std_des %></td>
+			<td><%= standard.std_active %></td>
+			<td><%= link_to_show "Show", standard %></td>
+			<td><%= link_to_edit "Edit", edit_standard_path(standard) %></td>
+			<td><%= link_to_destroy "Destroy", standard, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+		<% sno+=1
+		end %>
+	</table>
+	<br />
+	<p>
+		<%= will_paginate @standards %>
+	</p>
+<%else%>
+	<div class='flash_info'>
+		Record not found
+	</div>
+<%end%>

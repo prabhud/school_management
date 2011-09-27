@@ -1,0 +1,68 @@
+<% title "Stud Pre Sc Detail" %>
+
+<p>
+  <strong>Pre Sc Name:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_name %>
+</p>
+<p>
+  <strong>Pre Sc Principal Name:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_principal_name %>
+</p>
+<p>
+  <strong>Pre Sc Address1:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_address1 %>
+</p>
+<p>
+  <strong>Pre Sc Address2:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_address2 %>
+</p>
+<p>
+  <strong>Pre Sc State:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_state %>
+</p>
+<p>
+  <strong>Pre Sc Country:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_country %>
+</p>
+<p>
+  <strong>Pre Sc Pin:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_pin %>
+</p>
+<p>
+  <strong>Pre Sc Tel No:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_tel_no %>
+</p>
+<p>
+  <strong>Pre Sc Web Addr:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_web_addr %>
+</p>
+<p>
+  <strong>Pre Sc Email Addr:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_email_addr %>
+</p>
+<p>
+  <strong>Pre Sc Fax No:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_fax_no %>
+</p>
+<p>
+  <strong>Pre Sc Last Studied:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_last_studied %>
+</p>
+<p>
+  <strong>Pre Sc Leaving Date:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_leaving_date %>
+</p>
+<p>
+  <strong>Pre Sc Rea Of Leaving:</strong>
+  <%= @stud_pre_sc_detail.pre_sc_rea_of_leaving %>
+</p>
+<p>
+  <strong>Student:</strong>
+  <%= @stud_pre_sc_detail.student %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_stud_pre_sc_detail_path(@stud_pre_sc_detail) %> |
+  <%= link_to_destroy "Destroy", @stud_pre_sc_detail, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", stud_pre_sc_details_path %>
+</p>

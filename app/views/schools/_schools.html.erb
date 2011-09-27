@@ -1,0 +1,50 @@
+
+<p><%= link_to_new "New School", new_school_path %></p>
+
+<%if @schools.length > 0%>
+<table border=1>
+  <tr>
+<th>S.No</th>
+    <th>Sc Name</th>
+    <th>Sc Address1</th>
+    <th>Sc Address2</th>
+    <th>Sc State</th>
+    <th>Sc Pin</th>
+    <th>Sc Country</th>
+    <th>Sc Tel No</th>
+    <th>Sc Web Addr</th>
+    <th>Sc Email Addr</th>
+    <th>Sc Fax No</th>
+    <th>Sc Active</th>
+<th colspan='3'>Action</th>
+  </tr>
+  <%  sno = paginate_sno
+	for school in @schools %>
+    <tr>
+	<td align='right'><%= sno %></td>
+      <td><%= school.sc_name %></td>
+      <td><%= school.sc_address1 %></td>
+      <td><%= school.sc_address2 %></td>
+      <td><%= school.sc_state %></td>
+      <td><%= school.sc_pin %></td>
+      <td><%= school.sc_country %></td>
+      <td><%= school.sc_tel_no %></td>
+      <td><%= school.sc_web_addr %></td>
+      <td><%= school.sc_email_addr %></td>
+      <td><%= school.sc_fax_no %></td>
+      <td><%= school.sc_active %></td>
+      <td><%= link_to_show "Show", school %></td>
+      <td><%= link_to_edit "Edit", edit_school_path(school) %></td>
+      <td><%= link_to_destroy "Destroy", school, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% sno+=1
+	end %>
+</table>
+  <br />
+    <p><%= will_paginate @schools %></p>
+
+<%else%>
+	<div class='flash_info'>
+		Record not found
+	</div>
+<%end%>

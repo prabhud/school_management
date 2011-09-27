@@ -1,0 +1,24 @@
+<% title "Schools" %>
+<%= form_for @search, :html => { :id => "search-form" }   do |search| %>
+    <div id="div-search-form">
+        <table>
+            <tr><h3>Searching Criteria</h3></tr>
+            <tr>
+                <td><%= search.text_field :sc_name_contains,:size => 15, :title => "Name" %></td>
+				<td><%= search.text_field :sc_city_contains,:size => 15, :title => "City" %></td>
+				<td><%= search.text_field :sc_state_contains,:size => 15, :title => "State" %></td>
+				<td><%= search.text_field :sc_pin_contains,:size => 15, :title => "PIN" %></td>
+			</tr>
+			<tr>
+				<td><%= search.text_field :sc_tel_no_contains,:size => 15, :title => "TelePhone" %></td>
+				<td><%= search.text_field :sc_fax_no_contains,:size => 15, :title => "Fax No" %></td>
+                <td><%=search.submit "Search", :name => nil%></td>
+                <td><%= reset_form%></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id='schools'>
+        <%= render 'schools'%>
+    </div>
+<%end%>

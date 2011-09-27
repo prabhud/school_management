@@ -1,0 +1,52 @@
+<% title "Employee" %>
+
+<p>
+  <strong>Emp Name:</strong>
+  <%= @employee.emp_name %>
+</p>
+<p>
+  <strong>Emp Address1:</strong>
+  <%= @employee.emp_address1 %>
+</p>
+<p>
+  <strong>Emp Address2:</strong>
+  <%= @employee.emp_address2 %>
+</p>
+<p>
+  <strong>Emp State:</strong>
+  <%= @employee.emp_state %>
+</p>
+<p>
+  <strong>Emp Pin:</strong>
+  <%= @employee.emp_pin %>
+</p>
+<p>
+  <strong>Emp Country:</strong>
+  <%= @employee.emp_country %>
+</p>
+<p>
+  <strong>Emp Mobile:</strong>
+  <%= @employee.emp_mobile %>
+</p>
+<p>
+  <strong>Emp Email:</strong>
+  <%= @employee.emp_email %>
+</p>
+<p>
+  <strong>Emp Active:</strong>
+  <%= @employee.emp_active %>
+</p>
+<p>
+  <strong>Emp Type:</strong>
+  <%= @employee.emp_type %>
+</p>
+<p>
+  <strong>School:</strong>
+  <%= @employee.school %>
+</p>
+
+<p>
+  <%= link_to_edit "Edit", edit_employee_path(@employee) %> |
+  <%= link_to_destroy "Destroy", @employee, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", employees_path %>
+</p>

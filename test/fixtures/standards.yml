@@ -1,0 +1,9 @@
+one:
+  std_name: MyString
+  std_des: MyText
+  std_active: false
+
+two:
+  std_name: MyString
+  std_des: MyText
+  std_active: false

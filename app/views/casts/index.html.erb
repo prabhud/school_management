@@ -1,0 +1,16 @@
+<% title "Casts" %>
+<%= form_for @search, :as => :search, :html => {:id => "search-form", :method => :get}   do |f| %>
+	<div id="div-search-form">
+		<table>
+			<tr><h3>Searching Criteria</h3></tr>
+			<tr>
+				<td><%=f.text_field :cast_name_contains, :size => 15, :title => "Cast"%></td>
+				<td><%=f.submit "Create Search", :name => nil%></td>
+				<td><%= reset_form%></td>
+			</tr>
+		</table>
+	</div>
+	<div id='casts'>
+		<%= render 'casts'%>
+	</div>
+<%end%>

@@ -1,0 +1,18 @@
+<% title "Standards" %>
+<%= form_for @search, :html => { :id => "search-form" }   do |search| %>
+    <div id="div-search-form">
+        <table>
+            <tr><h3>Searching Criteria</h3></tr>
+            <tr>
+                <td><%= search.text_field :std_name_str_contains,:size => 15, :title => "Name" %></td>
+				<td><%= search.text_field :std_name_int_equals,:size => 15, :title => "Name" %></td>
+				<td><%=search.submit "Search", :name => nil%></td>
+                <td><%= reset_form%></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id='standards'>
+        <%= render 'standards'%>
+    </div>
+<%end%>

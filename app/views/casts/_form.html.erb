@@ -1,0 +1,21 @@
+
+<%= form_for @cast, :validate => true, :html => { :id => '@cast_form'} do |f| %>
+	<%= f.error_messages %>
+	<table>
+		<tr>
+			<td> <%= f.label :cast_name %></td>
+			<td> <%= f.text_field :cast_name, :val => "allow_alpha_only" %></td>
+		</tr>
+		<tr>
+			<td> <%= f.label :cast_des %></td>
+			<td> <%= f.text_area :cast_des %></td>
+		</tr>
+		<tr>
+			<td> <%= f.label :cast_active %></td>
+			<td> <%= f.check_box :cast_active %></td>
+		</tr>
+		<tr>
+			<td colspan='2'><%= f.submit %></td>
+		</tr>
+	</table>
+<% end %>

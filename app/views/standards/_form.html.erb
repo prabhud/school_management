@@ -1,0 +1,26 @@
+<%= form_for @standard, :validate => true, :html => { :id => 'standard_form'} do |f| %>
+	<%= f.error_messages %>
+	<div id="form-fields">
+		<table>
+			<tr>
+				<td> <%= f.label :std_name_str, "Standard Name as Text" %></td>
+				<td> <%= f.text_field :std_name_str %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :std_name_int, "Standard Name as Integer" %></td>
+				<td> <%= f.text_field :std_name_int %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :std_des, "Description" %></td>
+				<td> <%= f.text_area :std_des %></td>
+			</tr>
+			<tr>
+				<td> <%= f.label :std_active, "Active" %></td>
+				<td> <%= f.check_box :std_active %></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><%= f.submit %></td>
+			</tr>
+		</table>
+	</div>
+<% end %>

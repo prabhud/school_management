@@ -1,0 +1,9 @@
+one:
+  cast_name: MyString
+  cast_des: MyText
+  cast_active: false
+
+two:
+  cast_name: MyString
+  cast_des: MyText
+  cast_active: false

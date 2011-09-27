@@ -1,0 +1,31 @@
+
+<p><%= link_to_new "New Cast", new_cast_path %></p>
+<%if @casts.length > 0%>
+<table border=1>
+  <tr>
+	<th width='5'>S.No</th>
+    <th><%= sort_link @search, :cast_name, "Cast"%></th>
+    <th>Description</th>
+    <th colspan='3'>Action</th>
+  </tr>
+  <%sno = paginate_sno 
+	for cast in @casts %>
+    <tr>
+	  <td align='right'><%= sno %></td>
+      <td><%= cast.cast_name %></td>
+      <td><%= cast.cast_des %></td>
+      <td><%= link_to_show "Show", cast %></td>
+      <td><%= link_to_edit "Edit", edit_cast_path(cast) %></td>
+      <td><%= link_to_destroy "Destroy", cast, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% sno+=1
+	end %>
+</table>
+<%else%>
+	<div class='flash_info'>
+		Record not found
+	</div>
+<%end%>
+
+<br/>
+<%= will_paginate @casts %>

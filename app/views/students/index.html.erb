@@ -1,0 +1,21 @@
+<% title "Students" %>
+<%= form_for @search, :html => { :id => "search-form" }   do |search| %>
+    <div id="div-search-form">
+        <table>
+            <tr><h3>Searching Criteria</h3></tr>
+            <tr>
+                <td><%= search.text_field :stud_firstname_contains,:size => 15, :title => "Name" %></td>
+                <td><%= search.text_field :stud_father_name_contains,:size => 15, :title => "Father Name" %></td>
+           		<td><%= search.text_field :stud_mother_name_contains,:size => 15, :title => "Mother Name" %></td>
+           		<td><%= search.text_field :stud_dob_equals,:size => 15, :title => "DOB" %></td>
+                <td><%= search.text_field :stud_contact_number_contains,:size => 15, :title => "Contact Number" %></td>
+                <td><%=search.submit "Search", :name => nil%></td>
+                <td><%= reset_form%></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id='students'>
+        <%= render 'students'%>
+    </div>
+<%end%>

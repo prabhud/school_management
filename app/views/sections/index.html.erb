@@ -1,0 +1,17 @@
+<% title "Sections" %>
+    <%= form_for @search, :html => { :id => "search-form" }   do |search| %>
+    <div id="div-search-form">
+        <table>
+            <tr><h3>Searching Criteria</h3></tr>
+            <tr>
+                <td><%= search.text_field :sec_name_contains,:size => 15, :title => "Section" %></td>
+                <td><%=search.submit "Search", :name => nil%></td>
+                <td><%= reset_form%></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id='sections'>
+        <%= render 'sections'%>
+    </div>
+<%end%>
